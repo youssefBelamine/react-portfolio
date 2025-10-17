@@ -1,5 +1,5 @@
 import React from 'react'
-import { HERO_CONTENT } from '../constants'
+import { HERO_CONTENT, NAME } from '../constants'
 import profilePic from "../assets/youssefBelamine.png"
 import { motion } from "framer-motion";
 
@@ -38,7 +38,7 @@ export const Hero = () => {
                     variants={container(1)}
                     initial="hidden"
                     animate="visible"
-                    className='my-2 max-w-xl py-6 font-light' >{HERO_CONTENT}</motion.p>
+                    className='my-2 max-w-xl py-6 font-light' > <span className='text-xl font-bold'>Hi, I’m {NAME}! </span> {HERO_CONTENT}</motion.p>
                 </div>
             </div>
             <div className='w-full lg:w-1/2 lg:p-8'>

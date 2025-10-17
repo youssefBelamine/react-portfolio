@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Drawer from 'react-modern-drawer';
+import 'react-modern-drawer/dist/index.css';
 import logo from "../assets/youssefLogo.png";
-import { FaLinkedin, FaGithub } from "react-icons/fa";
+import { FaBars, FaLinkedin, FaGithub } from "react-icons/fa";
 
 export const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const toggleDrawer = () => setIsOpen(!isOpen);
   return (
     <nav className="mb-20 flex items-center justify-between py-6 px-8">
       
