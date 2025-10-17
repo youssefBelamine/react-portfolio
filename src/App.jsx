@@ -1,22 +1,38 @@
-import { useState } from 'react'
-import './App.css'
+import { useState } from "react";
+import "./App.css";
+import { Navbar } from "./components/Navbar";
+import { Hero } from "./components/Hero";
+import { About } from "./components/About";
+import { Technologies } from "./components/Technologies";
+import { Experience } from "./components/Experience";
+import { Projects } from "./components/Projects";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-      <div className="h-screen flex flex-col items-center justify-center bg-gray-100">
-      <h1 className="text-4xl font-bold text-blue-600 mb-4">
-        TailwindCSS is Working! 🎉
-      </h1>
-      <p className="text-lg text-gray-700 mb-6">
-        If you see blue text, gray background, and rounded button styles — it’s all good.
-      </p>
-      <button className="px-6 py-3 bg-green-500 text-white rounded-2xl shadow-lg hover:bg-green-600 transition">
-        Test Button
-      </button>
+    <div
+      className="overflow-x-hidden text-neutral-300 antialiased selection:bg-white
+       selection:text-cyan-900"
+    >
+      <div className="fixed top-0 -z-10 h-full w-full">
+        <div className="min-h-screen w-full relative bg-black">
+          <div
+      className="absolute inset-0 z-0"
+      style={{
+        background: "radial-gradient(ellipse 80% 60% at 50% 0%, rgba(99, 102, 241, 0.25), transparent 70%), #000000",
+      }}
+    />
+        </div>
+      </div>
+      <div className="container mx-auto px-8">
+        <Navbar />
+        <Hero />
+        <About />
+        <Technologies/>
+        <Experience/>
+        <Projects/>
+      </div>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
