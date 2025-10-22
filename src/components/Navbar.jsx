@@ -3,6 +3,7 @@ import Drawer from 'react-modern-drawer';
 import 'react-modern-drawer/dist/index.css';
 import logo from "../assets/youssefLogo.png";
 import { FaBars, FaLinkedin, FaGithub } from "react-icons/fa";
+import { FaWhatsappSquare } from "react-icons/fa";
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -26,12 +27,15 @@ export const Navbar = () => {
       </div>
 
       {/* Social Icons */}
-      <div className="flex items-center justify-center gap-6 text-2xl">
+      <div className="flex items-center justify-center gap-6 text-2xl text-gray-600">
         <a href="https://github.com/youssefBelamine" target="_blank" rel="noopener noreferrer">
-          <FaGithub className="hover:text-gray-600 transition-colors" />
+          <FaGithub className="hover:text-white transition-colors" />
         </a>
-        <a href="https://linkedin.com/in/youssefBelamine" target="_blank" rel="noopener noreferrer">
-          <FaLinkedin className="hover:text-blue-600 transition-colors" />
+        <a href="https://linkedin.com/in/youssef-belamine" target="_blank" rel="noopener noreferrer">
+          <FaLinkedin className="hover:text-[#136bc5] transition-colors" />
+        </a>
+        <a href="https://wa.me/212628038735?text=Hello%20I%20am%20Youssef" target="_blank" rel="noopener noreferrer">
+          <FaWhatsappSquare className="hover:text-[#2cd46b] transition-colors" />
         </a>
       </div>
 

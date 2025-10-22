@@ -29,6 +29,11 @@ export const Technologies = () => {
         transition={{duration: 1.5}}
         className='my-20 text-center text-4xl'>
             Technologies
+            <motion.p
+                    whileInView={{ opacity: 1, width: 260}}
+                    initial={{ opacity: 0, width: 0 }}
+                    transition={{ duration: 0.8, delay: 0.4 }}
+                     className=" h-[2px] rounded-full mt-1 w-2/10 m-auto bg-white"/>
         </motion.h1>
 
         <motion.div
