@@ -79,7 +79,7 @@ export const PROJECTS = [
 ];
 
 export const CONTACT = {
-  address: "Morocoo, Fes",
+  address: "Morocco, Fes",
   phoneNo: "+212 628-038735",
   email: "youssefbelamine23@gmail.com",
 };

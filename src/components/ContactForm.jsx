@@ -1,23 +1,31 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { useForm, ValidationError } from '@formspree/react';
 
 export function ContactForm() {
   const [state, handleSubmit] = useForm("mjkaqokv");
+  const formRef = useRef(null);
   // if (state.succeeded) {
   //     return <p>Thanks for joining!</p>;
   // }
-  console.log(state.submitting)
+
+  // Reset form after successful submission
+  useEffect(() => {
+    if (state.succeeded && formRef.current) {
+      formRef.current.reset();
+    }
+  }, [state]);
+
   return (
     <div className=" p-6 rounded-lg shadow-md w-full
              border backdrop-blur-md text-white">
       {/* className="flex-1 p-8 rounded-lg shadow-lg 
              bg-indigo-900/70 backdrop-blur-md text-white" */}
       <h2 className="text-2xl font-bold mb-6 text-center md:text-center bg-white text-black rounded-full px-3">Contact Me</h2>
-      <form  onSubmit={handleSubmit} className="flex flex-col gap-4">
+      <form ref={formRef}  onSubmit={handleSubmit} className="flex flex-col gap-4">
         <div className="flex flex-col">
 
                                     {/* Name field */}
-          <label htmlFor="name" className="mb-1 font-medium"> <span className="bg-white text-black rounded-full px-3 ml-1">Name</span> </label>
+          <label htmlFor="name" className="mb-1 font-medium"> <p className="bg-white text-black rounded-full px-3 ml-1 w-1/5 text-center">Name</p> </label>
           <input
             type="text"
             id="name"
@@ -30,7 +38,7 @@ export function ContactForm() {
 
                                     {/* Email field */}
         <div className="flex flex-col">
-          <label htmlFor="email" className="mb-1 font-medium"><span className="bg-white text-black rounded-full px-3 ml-1 w-1/4">Email</span></label>
+          <label htmlFor="email" className="mb-1 font-medium"><p className="bg-white text-black rounded-full px-3 ml-1  w-1/5 text-center">Email</p></label>
           <input
             type="email"
             id="email"
@@ -48,7 +56,7 @@ export function ContactForm() {
 
                                     {/* Subject Field */}
         <div className="flex flex-col">
-          <label htmlFor="subject" className="mb-1 font-medium"><span className="bg-white text-black rounded-full px-3 ml-1 w-1/4">Subject</span></label>
+          <label htmlFor="subject" className="mb-1 font-medium"><p className="bg-white text-black rounded-full px-3 ml-1 w-1/5 text-center">Subject</p></label>
           <input
             id="subject"
             name="subject"
@@ -65,7 +73,7 @@ export function ContactForm() {
 
                                     {/* message Field */}
         <div className="flex flex-col">
-          <label htmlFor="message" className="mb-1 font-medium"><span className="bg-white text-black rounded-full px-3 ml-1 w-1/4">Message</span></label>
+          <label htmlFor="message" className="mb-1 font-medium"><p className="bg-white text-black rounded-full px-3 ml-1 w-1/5 text-center">Message</p></label>
           <textarea
             id="message"
             name="message"

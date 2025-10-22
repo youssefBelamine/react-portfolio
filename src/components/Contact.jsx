@@ -16,7 +16,7 @@ export const Contact = () => {
         transition={{ duration: 0.5 }}
         className="text-4xl text-center mb-12"
       >
-        Get in Touch
+        Get in <span className="text-neutral-500">Touch</span>
         <motion.p
         whileInView={{ opacity: 1, width: 260}}
         initial={{ opacity: 0, width: 0 }}
