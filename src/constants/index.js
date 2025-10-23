@@ -1,4 +1,4 @@
-import project1 from "../assets/projects/project-1.jpg";
+import project1 from "../assets/projects/project-1.png";
 import project2 from "../assets/projects/project-2.jpg";
 import project3 from "../assets/projects/project-3.jpg";
 import project4 from "../assets/projects/project-4.jpg";
@@ -7,14 +7,14 @@ export const NAME = "Youssef"
 
 export const HERO_CONTENT = "I am a passionate full-stack developer with a knack for building robust and scalable web applications. I have experience with front-end technologies like React and Next.js, as well as back-end technologies including Node.js, Laravel, MySQL, and MongoDB. My goal is to use my skills to create innovative solutions that drive business growth and deliver outstanding user experiences.";
 
-export const ABOUT_TEXT = `I am a dedicated and versatile Full-Stack developer with a passion
- for creating efficient and user-friendly web applications. I have worked with a variety of 
- technologies, including React, Next.js, 
- Node.js, Laravel, MySQL, MySQL, and MongoDB. My journey in web development began with a
-  deep curiosity for how things work, and it has evolved into a career where I continuously 
-  strive to learn and adapt to new challenges. I thrive in collaborative environments and 
-  enjoy solving complex problems to deliver high-quality solutions. Outside of coding, I 
-  enjoy staying active, exploring new technologies, and contributing to open-source projects.`;
+export const ABOUT_TEXT = `I am a dedicated and versatile Full-Stack Developer with a passion for building efficient, modern, and user-friendly web applications. 
+Over time, I have gained experience working with various technologies, including React, Next.js, Node.js, Laravel, MySQL, and MongoDB. 
+
+My journey in web development started from a deep curiosity about how things work, which has grown into a strong desire to learn, create, and solve problems. 
+I enjoy collaborating with others and tackling complex challenges to deliver high-quality and impactful solutions. 
+
+Outside of coding, I like staying active, exploring new technologies, and contributing to open-source projects.`;
+
 
 export const EXPERIENCES = [
   {
@@ -49,11 +49,11 @@ export const EXPERIENCES = [
 
 export const PROJECTS = [
   {
-    title: "E-Commerce Website",
+    title: "Products Management App",
     image: project1,
     description:
-      "A fully functional e-commerce website with features like product listing, shopping cart, and user authentication.",
-    technologies: ["HTML", "CSS", "React", "Node.js", "MongoDB"],
+      "A fully functional products management app with features like user authentication.",
+    technologies: ["Laravel 12 Starter kit", "React.js", "TailwindCSS", "Inertia.js", "MySQL"],
   },
   {
     title: "Task Management App",

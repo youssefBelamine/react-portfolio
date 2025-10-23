@@ -25,15 +25,20 @@ export const About = () => {
             </div>
         </motion.div>
         <motion.div 
-        whileInView={{opacity: 1, x: 0}}
-        initial={{opacity: 0, x: 100}}
-        transition={{duration: 0.5}}
-        className="w-full lg:w-1/2">
-        <div className="flex justify-center lg:justify-start">
-            <p className="my-2 max-w-xl py-6" > {ABOUT_TEXT} </p>
-        </div>
+  whileInView={{ opacity: 1, x: 0 }}
+  initial={{ opacity: 0, x: 100 }}
+  transition={{ duration: 0.5 }}
+  className="w-full lg:w-1/2 px-4"
+>
+  <div className="flex justify-center lg:justify-start">
+    <p 
+      className="my-2 shadow-xl/30 shadow-white max-w-xl py-6 text-gray-300 text-lg leading-relaxed tracking-wide whitespace-pre-line bg-gradient-to-r from-gray-900/40 to-gray-800/20 rounded-2xl p-6 shadow-lg border border-gray-700/40"
+    >
+      {ABOUT_TEXT}
+    </p>
+  </div>
+</motion.div>
 
-        </motion.div>
 
       </div>
     </div>

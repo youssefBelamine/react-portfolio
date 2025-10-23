@@ -27,9 +27,9 @@ export const Technologies = () => {
   // Tech icons array
   const icons = [
     { component: <RiReactjsLine className="text-7xl text-cyan-400" /> },
-    { component: <TbBrandNextjs className="text-7xl text-white" /> },
+    // { component: <TbBrandNextjs className="text-7xl text-white" /> },
     { component: <FaBootstrap className="text-7xl text-[#860afb]" /> },
-    { component: <SiTailwindcss className="text-7xl text-[#00b9d8] " /> },
+    { component: <SiTailwindcss className="text-7xl text-[#00b9d8]" /> },
     { component: <SiLaravel className="text-7xl text-red-500" /> },
     { component: <RiNodejsFill className="text-7xl text-[#87cf30]" /> },
     { component: <SiMongodb className="text-7xl text-[#589636]" /> },
@@ -66,7 +66,7 @@ export const Technologies = () => {
           {[...icons, ...icons].map((icon, index) => (
             <div
               key={index}
-              className="rounded-2xl border-4 border-neutral-800 p-4 flex justify-center items-center bg-black/20 backdrop-blur-md"
+              className="rounded-2xl border-4 border-neutral-800 hover:border-neutral-500 transition-colors p-4 flex justify-center items-center bg-black/20 backdrop-blur-md"
             >
               {icon.component}
             </div>

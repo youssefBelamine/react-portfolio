@@ -8,7 +8,7 @@ export const Contact = () => {
   return (
     <section
       id="contact"
-      className="border-b border-neutral-900 py-14 px-4 md:px-10 lg:px-20"
+      className="border-b border-neutral-900 py-14 px-4 lg:px-10 xl:px-20"
     >
       <motion.h1
         whileInView={{ opacity: 1, y: 0 }}
@@ -24,7 +24,7 @@ export const Contact = () => {
          className=" h-[2px] rounded-full mt-1 w-2/10 m-auto bg-white"/>
       </motion.h1>
 
-      <div className="flex flex-col md:flex-row gap-10">
+      <div className="flex flex-col lg:flex-row gap-10">
         {/* Left Box - Contact Info */}
         <motion.div
           whileInView={{ opacity: 1, x: 0 }}
@@ -36,14 +36,18 @@ export const Contact = () => {
             <p className="text-lg font-medium">
               <p>{CONTACT.address}</p></p>
             <p className="text-lg font-medium">
+
               <a href={`tel:${CONTACT.phoneNo}`} className="border-b border-dashed">
                 {CONTACT.phoneNo}
               </a>
+
               </p>
             <p className="text-lg font-medium">
+
               <a href={`mailto:${CONTACT.email}`} className="border-b border-dashed">
                 {CONTACT.email}
               </a>
+              
             </p>
           </div>
         </motion.div>

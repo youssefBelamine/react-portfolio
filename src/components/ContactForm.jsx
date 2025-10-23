@@ -20,12 +20,15 @@ export function ContactForm() {
              border backdrop-blur-md text-white">
       {/* className="flex-1 p-8 rounded-lg shadow-lg 
              bg-indigo-900/70 backdrop-blur-md text-white" */}
-      <h2 className="text-2xl font-bold mb-6 text-center md:text-center bg-white text-black rounded-full px-3">Contact Me</h2>
+      <h2 className="text-2xl font-bold mb-6 text-center xl:text-center bg-white text-black rounded-full px-3">Contact Me</h2>
       <form ref={formRef}  onSubmit={handleSubmit} className="flex flex-col gap-4">
         <div className="flex flex-col">
 
                                     {/* Name field */}
-          <label htmlFor="name" className="mb-1 font-medium"> <p className="bg-white text-black rounded-full px-3 ml-1 w-1/5 text-center">Name</p> </label>
+          <label htmlFor="name" className="mb-1 font-medium"> 
+            <p className="bg-white text-black rounded-full px-3 ml-1 w-1/5 text-center">Name</p>
+          </label>
+
           <input
             type="text"
             id="name"
