@@ -9,7 +9,7 @@ export default function ProjectMockup({ image, title, link }) {
           width={150}
           height={150}
         //   className='mb-6 rounded'
-          className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-105 mb-6"
+          className="object-cover w-full h-full group-hover:scale-105 mb-6"
         />
       </div>
 
@@ -21,7 +21,7 @@ export default function ProjectMockup({ image, title, link }) {
         <h3 className="text-xl font-semibold text-white mb-3">{title}</h3>
         <a
           href={link}
-          target="_blank"
+          // target="_blank"
           rel="noopener noreferrer"
           className="px-5 py-2 bg-white text-black font-semibold rounded-md hover:bg-gray-300"
         >

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { HERO_CONTENT, NAME } from "../constants";
 import profilePic from "../assets/youssefBelamine.png";
 import { motion } from "framer-motion";
@@ -13,11 +13,13 @@ const container = (delay) => ({
 });
 
 export const Hero = () => {
+  const [colorIt, setColorIt] = useState(false);
   return (
-    <div id="home" className="border-b border-neutral-900 pb-4 lg:mb-35">
-      <div className="flex flex-wrap">
+    <div id="home" className="border-b border-neutral-900 pb-4 llg:mb-35">
+      <div className="flex flex-wrap justify-center">
         
-        <div className="w-full lg:w-1/2 lg:p-8">
+                  {/* image section */}
+        <div className={`w-full lg:w-1/2 xl:2/3 lg:p-8 ${colorIt ? "bg-green-500" : ""}`}>
           <div className="flex justify-center">
             <motion.img
               initial={{ x: -100, opacity: 0 }}
@@ -28,17 +30,19 @@ export const Hero = () => {
             />
           </div>
         </div>
-        <div className="w-full lg:w-1/2">
-          <div className="flex flex-col items-center lg:items-start">
+        {/* ------------------------------------- */}
+
+              {/* Name and job title */}
+        {/* <div className="w-full lg:w-1/2 bg-red-500"> */}
+          <div className={`lg:w-1/2 xl:w-fit flex flex-col items-center justify-center ${colorIt ? "bg-blue-500" : ""}`}>
             <motion.h1
               variants={container(0)}
               initial="hidden"
               animate="visible"
-              className="pb-16 text-6xl font-thin tracking-tight lg:mt-16 lg:text-8xl"
+              className="pb-16 text-6xl font-thin tracking-tight llg:mt-16 llg:text-8xl"
             >
               Youssef Belamine
             </motion.h1>
-
             <motion.span
               variants={container(0.5)}
               initial="hidden"
@@ -49,17 +53,23 @@ export const Hero = () => {
               Full Stack Developer
             </motion.span>
 
+          </div>
+
+          <div className={`${colorIt ? "bg-amber-700" : ""} w-full flex justify-center`}>
+
             <motion.p
               variants={container(1)}
               initial="hidden"
               animate="visible"
-              className="my-2 shadow-xl/30 shadow-white max-w-xl py-6 text-gray-300 text-lg leading-relaxed tracking-wide whitespace-pre-line bg-gradient-to-r from-gray-900/40 to-gray-800/20 rounded-2xl p-6 shadow-lg border border-gray-700/40"
+              className="my-2 shadow-xl/30 shadow-white py-6 text-gray-300 text-lg  xl:text-justify
+              leading-relaxed tracking-wide whitespace-pre-line bg-gradient-to-r from-gray-900/40
+               to-gray-800/20 rounded-2xl p-6 shadow-lg border border-gray-700/40 lg:w-full"
             >
               <span className="text-xl font-bold">Hi, I’m {NAME}!</span>{" "}
               {HERO_CONTENT}
             </motion.p>
           </div>
-        </div>
+        {/* </div> */}
       </div>
     </div>
   );

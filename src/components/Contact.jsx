@@ -3,6 +3,7 @@ import { CONTACT } from "../constants";
 import { motion } from "framer-motion";
 import { ContactForm } from "./ContactForm";
 import { FaLocationDot } from "react-icons/fa6";
+import Index from './NewcontactForm.jsx'
 
 export const Contact = () => {
   return (
@@ -59,7 +60,7 @@ export const Contact = () => {
           transition={{ duration: 1 }}
           className="flex-1 p-4 rounded-lg shadow-lg"
         >
-          <ContactForm />
+          <Index/>
         </motion.div>
       </div>
     </section>

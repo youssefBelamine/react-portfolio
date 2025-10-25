@@ -24,13 +24,13 @@ export const Projects = () => {
         {PROJECTS.map((project, index) => (
           <div
             key={index}
-            className="mb-14 flex flex-wrap lg:justify-center border-b border-white/25 pb-10"
+            className="mb-14 flex flex-wrap justify-around border-b border-white/25 pb-10"
           >
             <motion.div
               whileInView={{ opacity: 1, x: 0 }}
               initial={{ opacity: 0, x: -100 }}
               transition={{ duration: 1 }}
-              className="w-full lg:w-1/4"
+              className=""
             >
               {/* <img src={project.image}
                             width={150} 
@@ -48,7 +48,9 @@ export const Projects = () => {
   whileInView={{ opacity: 1, x: 0 }}
   initial={{ opacity: 0, x: 100 }}
   transition={{ duration: 1 }}
-  className="w-full max-w-xl lg:w-3/4 ml-14 my-4 p-6 bg-gradient-to-r from-gray-900/40 to-gray-800/20 rounded-2xl shadow-xl/15 shadow-white border border-gray-700/40"
+  className="w-full max-w-xl p-6 bg-gradient-to-r
+   from-gray-900/40 to-gray-800/20 rounded-2xl shadow-xl/15
+    shadow-white border border-gray-700/40"
 >
   <h6 className="text-lg font-bold text-gray-200 mb-2">
                 {project.title}
@@ -60,7 +62,7 @@ export const Projects = () => {
                 {project.technologies.map((tech, index) => (
                   <span
                     key={index}
-                    className="mr-2 rounded bg-neutral-900 px-2 py-1 text-medium transition-colors outline-2 text-cyan-900 border-cyan-900 hover:text-cyan-600 hover:border-cyan-600"
+                    className="m-2 rounded bg-neutral-900 px-2 py-1 text-medium transition-colors outline-2 text-cyan-900 border-cyan-900 hover:text-cyan-600 hover:border-cyan-600"
                   >
                     {tech}
                   </span>
