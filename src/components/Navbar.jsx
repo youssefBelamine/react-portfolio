@@ -26,7 +26,7 @@ export const Navbar = () => {
   }, [lastScroll]);
 
   return (
-    <nav className="mb-20 flex items-center flex-wrap py-6 px-8 w-full justify-center ">
+    <nav className="mb-20 flex items-center flex-wrap py-6 px-8 w-full justify-center">
       {/* Logo + Social */}
       <div className="w-full flex justify-between">
         <div className="flex flex-shrink-0 items-center">
@@ -60,7 +60,7 @@ export const Navbar = () => {
 
       {/* Menu */}
       <div
-        className={`fixed md:flex items-center gap-8 text-lg font-medium border border-[#606060] px-6 py-3 rounded-full bg-gray-900/90 z-50`}
+        className={` md:flex items-center gap-8 text-lg font-medium border border-[#606060] px-6 py-3 rounded-full bg-gray-900/90 z-50`}
       >
         <a href="#home" className={style.menuItemStyle}>
           Home

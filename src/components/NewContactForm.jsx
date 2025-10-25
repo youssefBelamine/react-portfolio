@@ -78,7 +78,7 @@ const Index = () => {
             <input
               {...register("name")}
               placeholder="Your Name"
-              className="w-full bg-[#262626] border border-gray-600 rounded-md px-4 py-2 text-gray-100 placeholder-gray-400 focus:border-yellow-500 focus:ring focus:ring-yellow-400/20 transition-all duration-300"
+              className="w-full bg-[#262626] border border-gray-600 rounded-md px-4 py-2 text-gray-100 placeholder-gray-400 focus:border-blue-500 focus:ring focus:ring-blue-400/20 transition-all duration-300"
             />
             {errors.name && (
               <p className="text-red-500 text-sm mt-1">{errors.name.message}</p>
@@ -92,7 +92,8 @@ const Index = () => {
               {...register("email")}
               type="email"
               placeholder="your.email@company.com"
-              className="w-full bg-[#262626] border border-gray-600 rounded-md px-4 py-2 text-gray-100 placeholder-gray-400 focus:border-yellow-500 focus:ring focus:ring-yellow-400/20 transition-all duration-300"
+              className="w-full bg-[#262626] border border-gray-600 rounded-md px-4 py-2 text-gray-100 placeholder-gray-400
+               focus:border-blue-500 focus:ring focus:ring-blue-400/20 transition-all duration-300"
             />
             {errors.email && (
               <p className="text-red-500 text-sm mt-1">{errors.email.message}</p>
